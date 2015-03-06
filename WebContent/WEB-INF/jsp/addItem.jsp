@@ -9,7 +9,6 @@
 <style type="text/css">@import url("<c:url value="/css/main.css"/>");</style>
 </head>
 <body>
-
 <div id="global">
 <form:form modelAttribute="Book"  action= "addItem" method="post">
     <fieldset>
