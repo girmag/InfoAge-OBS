@@ -4,17 +4,24 @@ import java.util.List;
 
 
 
+
+
+import org.apache.tomcat.jni.Address;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.infoage.domain.Customer;
+
 @Controller
 public class HomepageController {
-	 @RequestMapping(value = {"/"})
+	 @RequestMapping(value = {"/", "/addCustomer"})
 	    public String listBooks(Model model) {
-	 
-	       
-	        return "home";
+		 Customer newCustomer=new Customer();
+		 model.addAttribute("customer",newCustomer);
+		 
+		 
+		  return "customerReg";
 	    }
 
 }

@@ -1,5 +1,5 @@
 package com.infoage.domain;
-public class Adress {
+public class Address {
 
 	
 	private String street;
@@ -12,7 +12,7 @@ public class Adress {
 
 	private String country;
 
-	private int postCode;
+	private int zipCode;
 
 	public String getStreet() {
 		return street;
@@ -54,12 +54,12 @@ public class Adress {
 		this.country = country;
 	}
 
-	public int getPostCode() {
-		return postCode;
+	public int getZipCode() {
+		return zipCode;
 	}
 
-	public void setPostCode(int postCode) {
-		this.postCode = postCode;
+	public void setZipCode(int postCode) {
+		this.zipCode = postCode;
 	}
 
 	
