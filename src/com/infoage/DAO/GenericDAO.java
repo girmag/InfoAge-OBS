@@ -9,7 +9,7 @@ import java.util.List;
  * @author GirmaGuta
  *
  */
-public interface GenericDAOInteface<D> {
+public interface GenericDAO<D> {
 		
 		public List<D> findByISBN(final String isbn);
 		public List<D> findByTitle(final String isbn);

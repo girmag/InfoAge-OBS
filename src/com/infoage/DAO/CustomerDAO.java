@@ -6,7 +6,7 @@ import java.util.List;
 
 import com.infoage.domain.Customer;
 
-public interface CustomerInterfae {
+public interface CustomerDAO {
 	
 	public String  saveCustomer(final Customer item);
 	public List<Customer> listCustomers();

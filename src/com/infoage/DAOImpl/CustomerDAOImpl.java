@@ -6,10 +6,10 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
-import com.infoage.DAO.CustomerInterfae;
+import com.infoage.DAO.CustomerDAO;
 import com.infoage.domain.Customer;
 @Repository
-public class CustomerDAOImpl implements CustomerInterfae {
+public class CustomerDAOImpl implements CustomerDAO {
 	//private List<Customer> customers=new ArrayList<Customer>();;
 	private static HashMap<String, Customer> customers = new HashMap<String, Customer>();
 	@Override

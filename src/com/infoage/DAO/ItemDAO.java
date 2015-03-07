@@ -2,7 +2,7 @@ package com.infoage.DAO;
 
 import java.util.List;
 import com.infoage.domain.Book;
-public interface ItemInterface {
+public interface ItemDAO {
 	public List<Book> findByISBN(final String isbn);
 	public List<Book> findByTitle(final String isbn);
 	public Book findById(final String isbn);
