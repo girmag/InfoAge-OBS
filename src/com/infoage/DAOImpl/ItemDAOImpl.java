@@ -4,11 +4,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import com.infoage.DAO.ItemInterface;
+import com.infoage.DAO.ItemDAO;
 import com.infoage.domain.Book;
 import com.infoage.domain.Customer;
 
-public class ItemDAOImpl implements ItemInterface{
+public class ItemDAOImpl implements ItemDAO{
 	private static HashMap<String, Book> books = new HashMap<String, Book>();
 		
 	
@@ -37,6 +37,7 @@ public class ItemDAOImpl implements ItemInterface{
 	@Override
 	public List<Book> listAllItems() {
 		// TODO Auto-generated method stub
+		
 		return null;
 	}
 
