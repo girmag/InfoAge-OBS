@@ -34,7 +34,7 @@ public class HomepageController {
 		 model.addAttribute("customer",newCustomer);
 		 
 		 
-		  return "customerReg";
+		  return "customer";
 	    }
 
 }
