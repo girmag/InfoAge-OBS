@@ -37,8 +37,8 @@ public class ItemDAOImpl implements ItemDAO{
 	@Override
 	public List<Book> listAllItems() {
 		// TODO Auto-generated method stub
-		
-		return null;
+		List<Book> values = new ArrayList<Book>(books.values());
+		return values;
 	}
 
 	@Override
@@ -65,6 +65,7 @@ public class ItemDAOImpl implements ItemDAO{
 	@Override
 	public Book updateItemByISBN(String isbn) {
 		// TODO Auto-generated method stub
+		
 		return null;
 	}
 
