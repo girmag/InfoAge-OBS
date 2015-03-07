@@ -1,29 +1,20 @@
-/*package com.infoage.controller;
+package mum.edu.controller;
 
 import java.util.List;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.infoage.domain.Book;
-
-
-@Controller
-public class BookController {
-	
-		 @RequestMapping(value = {"/"})
-		    public String listBooks(Model model) {
-		 	    Book newBook=new Book();   
-		 	    model.addAttribute("book", newBook);
-		        return "productReg";
-		    }
-}
-
-
+import mum.edu.domain.Book;
+import mum.edu.domain.Category;
+import mum.edu.service.BookService;
 
 @Controller
 public class BookController {
@@ -60,11 +51,11 @@ public class BookController {
         model.addAttribute("categories", categories);
         Book book = bookService.get(id);
         model.addAttribute(book);
-        
+ /*       
         book = new Book();
         book.setAuthor("Anybody");
         model.addAttribute(book);
-      
+ */     
         return "BookEditForm";
     }
 
@@ -77,4 +68,4 @@ public class BookController {
         return "redirect:/book_list";
     }
 
-}*/
+}
