@@ -14,7 +14,7 @@ public class HomepageController {
 	    }
 
 	 
-	 @RequestMapping(value = {"/","/addItem"})
+	 @RequestMapping(value = {"/addItem"})
 	    public String addItems(Model model) {
 	        
 	        return "addItem";
