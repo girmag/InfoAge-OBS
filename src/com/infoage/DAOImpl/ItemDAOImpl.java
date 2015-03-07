@@ -56,16 +56,18 @@ public class ItemDAOImpl implements ItemDAO{
 	}
 
 	@Override
-	public Book updateItemByID(Book item) {
+	public Book updateItemByID(String item) {
 		// TODO Auto-generated method stub
-		books.put(item.getItemId(),item);
+		
+		books.put(findById(item).getItemId(),findById(item));
 		return null;
 	}
 
 	@Override
-	public Book updateItemByISBN(String isbn) {
+	public Book updateItemByISBN(String id) {
 		// TODO Auto-generated method stub
-		return null;
+		
+		return findById(id);
 	}
 
 	@Override

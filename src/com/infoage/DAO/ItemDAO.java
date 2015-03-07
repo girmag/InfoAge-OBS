@@ -9,7 +9,7 @@ public interface ItemDAO {
 	public List<Book> listAllItems();
 	public List<Book> listItemsByCategory();
 	public String  saveItem(final Book item);
-	public Book updateItemByID(final Book itemID); // update item by Item 
+	public Book updateItemByID(final String itemID); // update item by Item 
 	public Book updateItemByISBN(final String isbn); // update item by ISBN
 	public void deleteByISBN(final String isbn);// to delete item by isbn
 	public void deleteItemID(final String itemId); // to delete item by its copy id or original id
