@@ -4,7 +4,7 @@ import java.util.Date;
 public class Item {
 
 	private String itemId;	
-	private String tittle;
+	private String title;
 	private float unitPrice;
 	private String publisher;
 	private Date yearofPublication;
@@ -17,12 +17,12 @@ public class Item {
 		this.itemId = itemId;
 	}
 
-	public String getTittle() {
-		return tittle;
+	public String getTitle() {
+		return title;
 	}
 
-	public void setTittle(String tittle) {
-		this.tittle = tittle;
+	public void setTitle(String tittle) {
+		this.title = tittle;
 	}
 
 	public float getUnitPrice() {
