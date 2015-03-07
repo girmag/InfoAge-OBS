@@ -1,4 +1,4 @@
-package com.infoage.controller;
+/*package com.infoage.controller;
 
 import java.util.List;
 
@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.infoage.domain.Book;
 
 
-/*@Controller
+@Controller
 public class BookController {
 	
 		 @RequestMapping(value = {"/"})
@@ -21,7 +21,7 @@ public class BookController {
 		 	    model.addAttribute("book", newBook);
 		        return "productReg";
 		    }
-}*/
+}
 
 
 
@@ -60,11 +60,11 @@ public class BookController {
         model.addAttribute("categories", categories);
         Book book = bookService.get(id);
         model.addAttribute(book);
- /*       
+        
         book = new Book();
         book.setAuthor("Anybody");
         model.addAttribute(book);
- */     
+      
         return "BookEditForm";
     }
 
@@ -77,4 +77,4 @@ public class BookController {
         return "redirect:/book_list";
     }
 
-}
+}*/
