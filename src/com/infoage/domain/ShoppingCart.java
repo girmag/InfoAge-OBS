@@ -5,7 +5,7 @@ import java.util.Iterator;
 
 public class ShoppingCart {
 
-	private Collection<OrderLine> orderdItem;
+	private Collection<OrderdBook> orderdItem;
 	private Date creationDate;
 	private int quantity;
 	private double price;
@@ -16,10 +16,10 @@ public class ShoppingCart {
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
-	public Collection<OrderLine> getOrderdItem() {
+	public Collection<OrderdBook> getOrderdItem() {
 		return orderdItem;
 	}
-	public void setOrderdItem(Collection<OrderLine> orderdItem) {
+	public void setOrderdItem(Collection<OrderdBook> orderdItem) {
 		this.orderdItem = orderdItem;
 	}
 	public Date getCreationDate() {
@@ -35,20 +35,20 @@ public class ShoppingCart {
 		this.price = price;
 	}
 	
-	public void addCartItem(OrderLine item) {
+	public void addCartItem(OrderdBook item) {
 		orderdItem.add(item);
 		updateGrandTotal();
 	}
-	public void removeCartItem(OrderLine item) {
+	public void removeCartItem(OrderdBook item) {
 		orderdItem.remove(item);
 		updateGrandTotal();
 	}
 
 	public void updateGrandTotal() {
 		double totalPrice = 0D;
-		Iterator<OrderLine> it = orderdItem.iterator();
+		Iterator<OrderdBook> it = orderdItem.iterator();
 		while (it.hasNext()) {
-			OrderLine currentLineItem = it.next();
+			OrderdBook currentLineItem = it.next();
 			totalPrice = totalPrice + currentLineItem.getPrice();
 		}
 		this.price = totalPrice;

@@ -7,7 +7,7 @@ public class BookStore {
 	private Collection<Book> books;
 	private Collection<Employees> employees;
 	private Collection<Customer> customers;
-	private Collection<Order> orders;
+	private Collection<OrderLine> orders;
 	
 	public String getName() {
 		return name;
@@ -33,10 +33,10 @@ public class BookStore {
 	public void setCustomers(Collection<Customer> customers) {
 		this.customers = customers;
 	}
-	public Collection<Order> getOrderline() {
+	public Collection<OrderLine> getOrderline() {
 		return orders;
 	}
-	public void setOrderline(Collection<Order> orders) {
+	public void setOrderline(Collection<OrderLine> orders) {
 		this.orders = orders;
 	}
 	
