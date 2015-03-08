@@ -2,8 +2,10 @@ package com.infoage.controller;
 
 import java.util.List;
 
-import com.infoage.DAO.ItemDAO;
+
+
 import com.infoage.domain.Book;
+import com.infoage.service.BookService;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -21,12 +23,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class BookController {
 
     @Autowired
-    private ItemDAO ItemDAO;
+    private BookService bookservice;
 
     @RequestMapping(value = {"/","/book_list"})
     public String listBooks(Model model) {
  
-        List<Book> books = ItemDAO.listItemsByCategory();
+        List<Book> books = bookservice.listItemsByCategory();
         model.addAttribute("books", books);
         return "bookList";
     }
@@ -39,14 +41,14 @@ public class BookController {
 
     @RequestMapping(value = "/addBook", method = RequestMethod.POST)
     public String saveBook(@ModelAttribute Book book) {
-    	ItemDAO.saveItem(book);
+    	bookservice.saveItem(book);
         return "redirect:/book_list";
     }
 
     @RequestMapping(value = "/book_edit/{id}")
     public String editBook(Model model, @PathVariable("id") String id) {
     	
-        Book book = ItemDAO.updateItemByID(id);
+        Book book = bookservice.updateItemByID(id);
         model.addAttribute(book);
      
         return "BookEditForm";

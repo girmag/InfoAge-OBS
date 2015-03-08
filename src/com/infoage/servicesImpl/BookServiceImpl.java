@@ -47,11 +47,8 @@ public class BookServiceImpl  implements BookService{
 		return null;
 	}
 
-	@Override
-	public Book updateItemByID(Book itemID) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+
+	
 
 	@Override
 	public Book updateItemByISBN(String isbn) {
@@ -69,6 +66,14 @@ public class BookServiceImpl  implements BookService{
 	public void deleteItemID(String itemId) {
 		// TODO Auto-generated method stub
 		
+	}
+
+
+
+	@Override
+	public Book updateItemByID(String itemID) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
