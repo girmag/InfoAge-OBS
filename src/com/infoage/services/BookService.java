@@ -1,8 +1,12 @@
-package com.infoage.DAO;
+;
 
 import java.util.List;
+
+import org.springframework.stereotype.Service;
+
 import com.infoage.domain.Book;
-public interface ItemDAO {
+
+public interface BookService {
 	public List<Book> findByISBN(final String isbn);
 	public List<Book> findByTitle(final String isbn);
 	public Book findById(final String isbn);
@@ -13,4 +17,4 @@ public interface ItemDAO {
 	public Book updateItemByISBN(final String isbn); // update item by ISBN
 	public void deleteByISBN(final String isbn);// to delete item by isbn
 	public void deleteItemID(final String itemId); // to delete item by its copy id or original id
-	}
+}

@@ -5,11 +5,11 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 
-import com.infoage.DAO.ItemDAO;
+import com.infoage.DAO.BookDAO;
 import com.infoage.domain.Book;
 import com.infoage.domain.Customer;
 
-public class bookDAOImpl implements ItemDAO{
+public class bookDAOImpl implements BookDAO{
 	private static HashMap<String, Book> books = new HashMap<String, Book>();
 	
 	public bookDAOImpl(){

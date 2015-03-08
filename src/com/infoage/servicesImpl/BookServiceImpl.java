@@ -2,10 +2,12 @@ package com.infoage.servicesImpl;
 
 import java.util.List;
 
-import com.infoage.domain.Book;
-import com.infoage.services.ItemServices;
+import org.springframework.stereotype.Service;
 
-public class ItemServiceImpl  implements ItemServices{
+import com.infoage.domain.Book;
+import com.infoage.services.BookService;
+@Service
+public class BookServiceImpl  implements BookService{
 
 	@Override
 	public String saveItem(Book book) {
