@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.infoage.DAOImpl.CustomerDAOImpl;
-import com.infoage.DAOImpl.bookDAOImpl;
+import com.infoage.DAOImpl.BookDAOImpl;
 import com.infoage.domain.Customer;
 
 @Controller

@@ -5,14 +5,16 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 
+import org.springframework.stereotype.Repository;
+
 import com.infoage.DAO.BookDAO;
 import com.infoage.domain.Book;
 import com.infoage.domain.Customer;
-
-public class bookDAOImpl implements BookDAO{
+@Repository
+public class BookDAOImpl implements BookDAO{
 	private static HashMap<String, Book> books = new HashMap<String, Book>();
 	
-	public bookDAOImpl(){
+	public BookDAOImpl(){
 	Book book1=new Book();
 	book1.setAuthor("Girma");
 	book1.setCategory("Childrens");
@@ -30,7 +32,7 @@ public class bookDAOImpl implements BookDAO{
 	book2.setCategory("oldies");
 	book2.setEdition(4);
 	book2.setIsbn("233444444");
-	book2.setItemId("c123");
+	book2.setItemId("c1234");
 	book2.setPublisher("pubfacts");
 	book2.setTitle("Fathers story");
 	book2.setUnitPrice(123);
@@ -66,8 +68,9 @@ public class bookDAOImpl implements BookDAO{
 	@Override
 	public List<Book> listAllItems() {
 		// TODO Auto-generated method stub
+		List<Book> values = new ArrayList<Book>(books.values());
+		return values;
 		
-		return null;
 	}
 
 	@Override
