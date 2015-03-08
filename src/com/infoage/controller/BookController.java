@@ -4,8 +4,10 @@ import java.util.List;
 
 
 
+
 import com.infoage.domain.Book;
 import com.infoage.services.BookService;
+
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -54,7 +56,5 @@ public class BookController {
         return "BookEditForm";
     }
 
-
-  
 
 }
