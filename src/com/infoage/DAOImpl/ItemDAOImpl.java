@@ -4,10 +4,12 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import org.springframework.stereotype.Repository;
+
 import com.infoage.DAO.ItemDAO;
 import com.infoage.domain.Book;
 import com.infoage.domain.Customer;
-
+@Repository
 public class ItemDAOImpl implements ItemDAO{
 	private static HashMap<String, Book> books = new HashMap<String, Book>();
 		

@@ -28,9 +28,14 @@ public class BookController {
  
         List<Book> books = ItemDAO.listItemsByCategory();
         model.addAttribute("books", books);
-        return "BookList";
+        return "bookList";
     }
 
+    @RequestMapping(value = "/addBook", method = RequestMethod.GET)
+    public String listBook(@ModelAttribute Book book) {
+    	
+        return "bookReg";
+    }
 
     @RequestMapping(value = "/addBook", method = RequestMethod.POST)
     public String saveBook(@ModelAttribute Book book) {
