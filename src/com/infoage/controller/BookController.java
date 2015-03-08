@@ -1,6 +1,9 @@
-package mum.edu.controller;
+package com.infoage.controller;
 
 import java.util.List;
+
+import com.infoage.DAO.ItemDAO;
+import com.infoage.domain.Book;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -12,60 +15,44 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import mum.edu.domain.Book;
-import mum.edu.domain.Category;
-import mum.edu.service.BookService;
+
 
 @Controller
 public class BookController {
 
     @Autowired
-    private BookService bookService;
+    private ItemDAO ItemDAO;
 
     @RequestMapping(value = {"/","/book_list"})
     public String listBooks(Model model) {
  
-        List<Book> books = bookService.getAllBooks();
+        List<Book> books = ItemDAO.listItemsByCategory();
         model.addAttribute("books", books);
-        return "BookList";
+        return "bookList";
     }
 
     @RequestMapping(value = "/addBook", method = RequestMethod.GET)
-    public String inputBook(@ModelAttribute("newBook") Book book, Model model) {
-        List<Category> categories = bookService.getAllCategories();
-        model.addAttribute("categories", categories);
-         return "BookAddForm";
+    public String listBook(@ModelAttribute Book book) {
+    	
+        return "bookReg";
     }
 
     @RequestMapping(value = "/addBook", method = RequestMethod.POST)
     public String saveBook(@ModelAttribute Book book) {
-        Category category = bookService.getCategory(book.getCategory().getId());
-        book.setCategory(category);
-        bookService.save(book);
+    	ItemDAO.saveItem(book);
         return "redirect:/book_list";
     }
 
     @RequestMapping(value = "/book_edit/{id}")
-    public String editBook(Model model, @PathVariable("id") long id) {
-        List<Category> categories = bookService.getAllCategories();
-        model.addAttribute("categories", categories);
-        Book book = bookService.get(id);
+    public String editBook(Model model, @PathVariable("id") String id) {
+    	
+        Book book = ItemDAO.updateItemByID(id);
         model.addAttribute(book);
- /*       
-        book = new Book();
-        book.setAuthor("Anybody");
-        model.addAttribute(book);
- */     
+     
         return "BookEditForm";
     }
 
 
-    @RequestMapping(value = "/book_update")
-    public String updateBook(@ModelAttribute Book book) {
-        Category category = bookService.getCategory(book.getCategory().getId());
-        book.setCategory(category);
-        bookService.update(book);
-        return "redirect:/book_list";
-    }
+  
 
 }
