@@ -4,7 +4,7 @@ import java.util.Collection;
 public class Customer extends Person {
 
 	private String customerId;
-	private Collection<Adress> adress;
+	private Address address;
 	private shopingCart shopingCart;
 	private Order order;
 	
@@ -14,11 +14,11 @@ public class Customer extends Person {
 	public void setCustomerId(String customerId) {
 		this.customerId = customerId;
 	}
-	public Collection<Adress> getAdress() {
-		return adress;
+	public Address getAdress() {
+		return address;
 	}
-	public void setAdress(Collection<Adress> adress) {
-		this.adress = adress;
+	public void setAddress(Address address) {
+		this.address = address;
 	}
 	public shopingCart getShopingCart() {
 		return shopingCart;

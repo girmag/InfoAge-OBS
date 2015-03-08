@@ -1,6 +1,7 @@
 package com.infoage.DAOImpl;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 
@@ -8,9 +9,37 @@ import com.infoage.DAO.ItemDAO;
 import com.infoage.domain.Book;
 import com.infoage.domain.Customer;
 
-public class ItemDAOImpl implements ItemDAO{
+public class bookDAOImpl implements ItemDAO{
 	private static HashMap<String, Book> books = new HashMap<String, Book>();
-		
+	
+	public bookDAOImpl(){
+	Book book1=new Book();
+	book1.setAuthor("Girma");
+	book1.setCategory("Childrens");
+	book1.setEdition(3);
+	book1.setIsbn("233444444");
+	book1.setItemId("c123");
+	book1.setPublisher("pubfacts");
+	book1.setTitle("Tom and Jerry");
+	book1.setUnitPrice(123);
+	book1.setYearofPublication(new Date(12/2/2013));
+	
+	
+	Book book2=new Book();
+	book2.setAuthor("Temam");
+	book2.setCategory("oldies");
+	book2.setEdition(4);
+	book2.setIsbn("233444444");
+	book2.setItemId("c123");
+	book2.setPublisher("pubfacts");
+	book2.setTitle("Fathers story");
+	book2.setUnitPrice(123);
+	book2.setYearofPublication(new Date(12/4/2010));
+	books.put(book1.getItemId(),book1);
+	books.put(book2.getItemId(),book2);
+	
+	}
+	
 	
 	@Override
 	public List<Book> findByISBN(String isbn) {
