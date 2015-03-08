@@ -23,6 +23,7 @@ public class BookDAOImpl implements BookDAO{
 	book1.setItemId("c123");
 	book1.setPublisher("pubfacts");
 	book1.setTitle("Tom and Jerry");
+	book1.setQuantity(100);
 	book1.setUnitPrice(123);
 	book1.setYearofPublication(new Date(12/2/2013));
 	
@@ -37,6 +38,7 @@ public class BookDAOImpl implements BookDAO{
 	book2.setTitle("Fathers story");
 	book2.setUnitPrice(123);
 	book2.setYearofPublication(new Date(12/4/2010));
+	book2.setQuantity(200);
 	books.put(book1.getItemId(),book1);
 	books.put(book2.getItemId(),book2);
 	

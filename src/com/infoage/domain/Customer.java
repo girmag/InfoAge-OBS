@@ -5,7 +5,7 @@ public class Customer extends Person {
 
 	private String customerId;
 	private Address address;
-	private shopingCart shopingCart;
+	private ShoppingCart shopingCart;
 	private Order order;
 	
 	public String getCustomerId() {
@@ -20,10 +20,10 @@ public class Customer extends Person {
 	public void setAddress(Address address) {
 		this.address = address;
 	}
-	public shopingCart getShopingCart() {
+	public ShoppingCart getShopingCart() {
 		return shopingCart;
 	}
-	public void setShopingCart(shopingCart shopingCart) {
+	public void setShopingCart(ShoppingCart shopingCart) {
 		this.shopingCart = shopingCart;
 	}
 	public Order getOrderline() {

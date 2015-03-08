@@ -10,7 +10,7 @@ import com.infoage.domain.Book;
 import com.infoage.services.BookService;
 @Service
 public class BookServiceImpl  implements BookService{
-	@Autowired
+@Autowired
 BookDAOImpl bookdaoimpl;
 	@Override
 	public String saveItem(Book book) {

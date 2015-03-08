@@ -4,7 +4,7 @@ import java.util.Collection;
 public class BookStore {
 
 	private String name;
-	private Collection<Item> items;
+	private Collection<Book> books;
 	private Collection<Employees> employees;
 	private Collection<Customer> customers;
 	private Collection<Order> orders;
@@ -15,11 +15,11 @@ public class BookStore {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public Collection<Item> getItems() {
-		return items;
+	public Collection<Book> getBooks() {
+		return books;
 	}
-	public void setItems(Collection<Item> items) {
-		this.items = items;
+	public void setItems(Collection<Book> books) {
+		this.books = books;
 	}
 	public Collection<Employees> getEmployees() {
 		return employees;

@@ -1,13 +1,9 @@
 package com.infoage.domain;
-public class Book extends Item {
-   private String id;
-	public String getId() {
-	return id;
-}
 
-public void setId(String id) {
-	this.id = id;
-}
+import java.util.Date;
+
+public class Book {
+  
 
 	private int edition;
 
@@ -16,6 +12,62 @@ public void setId(String id) {
 	private String author;
 
 	private String category;
+	
+	private int quantity;
+	
+	private String itemId;	
+	private String title;
+	private float unitPrice;
+	private String publisher;
+	private Date yearofPublication;
+	
+	public String getItemId() {
+		return itemId;
+	}
+
+	public void setItemId(String itemId) {
+		this.itemId = itemId;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String tittle) {
+		this.title = tittle;
+	}
+
+	public float getUnitPrice() {
+		return unitPrice;
+	}
+
+	public void setUnitPrice(float unitPrice) {
+		this.unitPrice = unitPrice;
+	}
+
+	public String getPublisher() {
+		return publisher;
+	}
+
+	public void setPublisher(String publisher) {
+		this.publisher = publisher;
+	}
+
+	public Date getYearofPublication() {
+		return yearofPublication;
+	}
+
+	public void setYearofPublication(Date yearofPublication) {
+		this.yearofPublication = yearofPublication;
+	}
+
+	public int getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
 
 	public int getEdition() {
 		return edition;

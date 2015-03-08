@@ -2,10 +2,16 @@ package com.infoage.domain;
 public class OrderLine {
 
 	private int number;
-	private Item item;
+	private Book book;
 	private int quantity;
 	private double price;
 	
+	public Book getBook() {
+		return book;
+	}
+	public void setBook(Book book) {
+		this.book = book;
+	}
 	public int getQuantity() {
 		return quantity;
 	}
@@ -24,12 +30,7 @@ public class OrderLine {
 	public void setNumber(int number) {
 		this.number = number;
 	}
-	public Item getItem() {
-		return item;
-	}
-	public void setItem(Item item) {
-		this.item = item;
-	}
+	
 
 	
 

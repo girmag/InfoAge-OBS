@@ -3,12 +3,19 @@ import java.util.Collection;
 import java.util.Date;
 import java.util.Iterator;
 
-public class shopingCart {
+public class ShoppingCart {
 
 	private Collection<OrderLine> orderdItem;
 	private Date creationDate;
+	private int quantity;
 	private double price;
 	
+	public int getQuantity() {
+		return quantity;
+	}
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
 	public Collection<OrderLine> getOrderdItem() {
 		return orderdItem;
 	}
