@@ -1,6 +1,10 @@
 package com.infoage.domain;
+
+import org.hibernate.validator.constraints.NotEmpty;
+
 public class Person {
 
+	@NotEmpty( message="{FirstName.firstName.validation}")
 	private String firstName;
 
 	private String lastName;

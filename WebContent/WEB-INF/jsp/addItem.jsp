@@ -17,11 +17,13 @@
             <label for="category"><spring:message code="book.category" /> </label>
              <form:select id="category" path="category.id" 
                 items="${categories}" itemLabel="name" itemValue="id"/>
+                <form:errors path="category" /> 
         </p>
          
         <p>
             <label for="title"><spring:message code="book.title" /> </label>
             <form:input id="title" path="title"/>
+             <form:errors path="title" /> 
         </p>
         <p>
             <label for="author">Author: </label>

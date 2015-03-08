@@ -1,4 +1,4 @@
-package mum.edu.controller;
+/*package mum.edu.controller;
 
 import java.util.List;
 
@@ -51,11 +51,11 @@ public class BookController {
         model.addAttribute("categories", categories);
         Book book = bookService.get(id);
         model.addAttribute(book);
- /*       
+        
         book = new Book();
         book.setAuthor("Anybody");
         model.addAttribute(book);
- */     
+      
         return "BookEditForm";
     }
 
@@ -68,4 +68,4 @@ public class BookController {
         return "redirect:/book_list";
     }
 
-}
+}*/

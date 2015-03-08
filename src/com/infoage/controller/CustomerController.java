@@ -15,26 +15,26 @@ import com.infoage.DAOImpl.CustomerDAOImpl;
 import com.infoage.DAOImpl.ItemDAOImpl;
 import com.infoage.domain.Customer;
 
-@Controller
+//@Controller
 public class CustomerController {
-	@Autowired
-    private CustomerDAOImpl custdao;
-		
-	 @RequestMapping(value = {"/customer_list"})
-	    public String listBooks(Model model) {
-	 
-	        List<Customer> books = custdao.listCustomers();
-	        model.addAttribute("books", books);
-	        return "addItem";
-	    }
-
-	    @RequestMapping(value = "/addcustomer", method = RequestMethod.GET)
-	    public String inputBook(@ModelAttribute("newcustoemr") Customer custoemr, Model model) {
-	        List<Customer> customers = custdao.listCustomers();
-	        model.addAttribute("customers", customers);
-	         return "home";
-	    }
-
-	
+//	@Autowired
+//    private CustomerDAOImpl custdao;
+//		
+//	 @RequestMapping(value = {"/customer_list"})
+//	    public String listBooks(Model model) {
+//	 
+//	        List<Customer> books = custdao.listCustomers();
+//	        model.addAttribute("books", books);
+//	        return "addItem";
+//	    }
+//
+//	    @RequestMapping(value = "/addcustomer", method = RequestMethod.GET)
+//	    public String inputBook(@ModelAttribute("newcustoemr") Customer custoemr, Model model) {
+//	        List<Customer> customers = custdao.listCustomers();
+//	        model.addAttribute("customers", customers);
+//	         return "home";
+//	    }
+//
+//	
 
 }
