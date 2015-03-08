@@ -27,10 +27,8 @@ public class CustomerDAOImpl implements CustomerDAO {
 		address.setZipCode(2222);
 		address.setState("California");
 		address.setStreet("N 3049");
-		
 		cust1.setAddress(address);
 		custList.put(cust1.getEmail(),cust1);
-
 		Customer cust2=new Customer();
 		cust2.setCustomerId("E0001");
 		cust2.setFirstName("Fifi");
@@ -42,12 +40,9 @@ public class CustomerDAOImpl implements CustomerDAO {
 		address2.setCountry("USA");
 		address2.setZipCode(11111);
 		address2.setState("Arizona");
-		address2.setStreet("S 204");
-		
+		address2.setStreet("S 204");		
 		cust2.setAddress(address2);
-		custList.put(cust2.getEmail(),cust2);
-
-		
+		custList.put(cust2.getEmail(),cust2);	
 		
 	}
 	
