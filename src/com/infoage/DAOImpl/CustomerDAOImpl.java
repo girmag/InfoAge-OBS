@@ -26,7 +26,7 @@ public class CustomerDAOImpl implements CustomerDAO {
 		address.setCountry("USA");
 		address.setZipCode(2222);
 		address.setState("California");
-		address.setStreet("N 304");
+		address.setStreet("N 3049");
 		
 		cust1.setAddress(address);
 		custList.put(cust1.getEmail(),cust1);
